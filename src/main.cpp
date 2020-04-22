@@ -36,7 +36,7 @@ std::map<char, uint8_t> countLetters(std::string text)
 std::vector<std::pair<char, uint8_t>> sortLetterCount(std::map<char, uint8_t> letter_map) 
 {
     std::vector<std::pair<char, uint8_t>> letter_vector(letter_map.begin(), letter_map.end());
-    sort(letter_vector.begin(), letter_vector.end(), [](std::pair<char, uint8_t> &left, std::pair<char, uint8_t> &right) { 
+    std::sort(letter_vector.begin(), letter_vector.end(), [](std::pair<char, uint8_t> &left, std::pair<char, uint8_t> &right) { 
         if (left.second == right.second) {
             return left.first < right.first;
         }
